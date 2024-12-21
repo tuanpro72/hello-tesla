@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirect Based on OS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+    <script type="text/javascript">
+        function redirectBasedOnOS() {
+            var userAgent = window.navigator.userAgent;
+            if (userAgent.indexOf('Windows') !== -1 || userAgent.indexOf('Linux') !== -1 || userAgent.indexOf('GNU') !== -1) {
+                window.location.href = 'https://www.google.com';
+            }
+        }
+        window.onload = redirectBasedOnOS;
+    </script>
+</head>
+<body>
+    <h1>Welcome to My Custom Page</h1>
+    <p>If you are not redirected, <a href="https://www.google.com">click here</a>.</p>
+</body>
+</html>
